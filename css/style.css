@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+}
+
+
+/* General Styling */
+section,
+#budget-display {
+    width: 80vw;
+    padding: 0 10vw;
+    margin-top: 4vh;
+}
+
+#profile,
+#worker-menu {
+    width: 80vw;
+    padding: 0 10vw;
+    margin-top: 4vh;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.button {
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(67, 57, 73);
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px gray;
+}
+
+.button-pressed {
+    background: rgb(197, 160, 204);
+    box-shadow: 0px 0px 6px gray;
+}
+
+.inactive-button {
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(152, 142, 158);
+    border-radius: 8px;
+}
+
+.workers h1 {
+    width: 80vw;
+    padding: 0 10vw;
+    font-size: 1.2em;
+}
+
+#emoji{
+    float: left;
+    position: relative;
+    top: 1vw;
+    left: 1vw;
+    max-width: 7%;
+    margin:0.5em;
+}
+
+p {
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+}
+
+.show{
+    display: inline;
+}
+
+/* Banner Styling */
+#banner {
+    width: 80vw;
+    height: 10vh;
+    padding: 0 10vw;
+    background: rgb(154, 125, 180);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#banner a {
+    padding: 0.2em;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#banner a:visited {
+    text-decoration: none;
+}
+
+#banner a.active {
+    color: rgb(152, 142, 158);
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Breadcrumb Styling */
+#breadcrumb {
+    width: 100vw;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+#breadcrumb a {
+    text-decoration: none;
+}
+
+/* Scanner Styling */
+#preview {
+    width: 42vw;
+    height: 27vw;
+    margin: 0 29vw;
+    margin-top: 2.5em;
+    border: 2px rgb(67, 57, 73) solid;
+    border-radius: 8px;
+}
+
+.scanner{
+    background-image: url("../images/profile.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+.scanner-message {
+    margin: 0 auto;
+    display: block;
+    font-size: 0em;
+    text-align: center;
+    transition: 1.5s;
+    opacity: 0;
+}
+
+.message-display {
+    font-size: 1em;
+    opacity: 1;
+}
+
+.resume-button {
+    max-width: 60vw;
+    margin: 0 auto;
+    margin-top: 1.2em;
+    display: block;
+    opacity: 0;
+}
+
+.resume-button-show {
+    opacity: 1;
+}
+
+/* Profile Styling */
+body.hire{
+    background-image: url("../images/profile.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+#profile {
+    max-width: 80vw;
+    padding: 0.5em;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: 2px rgb(67, 57, 73) solid;
+    border-radius: 8px;
+    background-color: rgba(200, 200, 200, 0.75);
+}
+
+#profile img {
+    width: 25%;
+}
+
+#profile article{
+    max-width: 70%;
+    padding: 0 1em;
+}
+
+#profile article >* {
+    margin: 0.5em 0;
+}
+
+#profile h2 {
+    font-size: 1.4em;
+}
+
+#profile p{
+    font-size: 1.1em;
+}
+
+section#worker-description {
+    width: 90%;
+    padding: 0;
+}
+
+#hire-options{
+    max-width: 80vw;
+    padding: 0.5em;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: 2px rgb(67, 57, 73) solid;
+    border-radius: 8px;
+    background-color: rgba(200, 200, 200, 0.75);
+}
+
+#hire-options h2{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#hire-options nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#hire-options a{
+    min-width: 20%;
+    font-size: 1.2em;
+}
+
+/* Roles Styling */
+#fullpage {
+    width: 100vw;
+    padding: 0;
+    background-image: url("../images/worker.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+.role img#logo{
+    max-width: 5%;
+    margin: 0.5em;
+}
+
+.fp-slidesNav.fp-bottom {
+    bottom: 10vh;
+}
+
+.fp-slidesNav.fp-bottom ul {
+    text-align: center;
+}
+
+.fp-tableCell {
+    vertical-align: top;
+}
+.fp-tableCell .content {
+    width: 80%;
+    height: 100%;
+    margin-top: 15%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.fp-tableCell article {
+    width: 80%;
+    height: 25%;
+    margin: 0 10%;
+}
+
+.fp-tableCell article p {
+    margin-bottom: 1em;
+}
+
+/* Station Styling */
+body.station{
+    background-image: url("../images/worker.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+body.station img#logo{
+    max-width: 5%;
+    display: flex;
+    float: left;
+    margin: 0.5em;
+}
+
+#manage-menu {
+    width: 70vw;
+    padding: 0 5vw;
+    margin: 0 10vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.manage-section {
+    max-width: 80%;
+    padding: 0.5em;
+    display: block;
+    background-color: rgba(200, 200, 200, 0.75);
+    border: 2px solid rgb(67, 57, 73);
+    border-radius: 8px;
+}
+
+.manage-section h2 {
+    width: 100%;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.manage-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#management-popup {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top:0;
+    left:0;
+    display: none;
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+#management-popup #worker-menu {
+    width: 70vw;
+    height: 60vh;
+    padding: 0;
+    margin: 20vh 15vw;
+    background-color: burlywood;
+    position: relative;
+}
+
+#management-popup #worker-menu #close-popup {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#management-popup #worker-menu h2 {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+#management-popup #worker-buttons {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#management-popup #worker-buttons a {
+    max-width: 40%;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+/* Worker Styling */
+body.workers{
+    background-image: url("../images/profile.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+body.workers img#girl{
+    max-width: 15%;
+    float: right;
+    margin-right: 2em;
+}
+
+.workers h1 {
+    width: 80vw;
+    padding: 0 10vw;
+    font-size: 1.2em;
+}
+
+.locked-slot{
+    display: none;
+}
+
+#worker-menu {
+    padding-bottom: 4em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#worker-menu > .worker {
+    width: 90%;
+    padding: 0 0.2em;
+    margin: 0;
+    margin-bottom: 0.4em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    border: 2px solid rgb(67, 57, 73);
+    border-radius: 8px;
+    background-color: rgba(200, 200, 200, 0.75);
+}
+
+#worker-menu >.hide{
+    display: none;
+}
+
+.worker >article {
+    width: 75%;
+    height: 90%;
+    padding: 0.2em 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+#worker-menu img {
+    width: 20%;
+    height: 80%;
+    margin: 0 0.5em;
+}
+
+#worker-menu .button {
+    width: 70%;
+    margin: 0 10%;
+    text-align: center;
+}
+
+#station-link {
+    width: 40vw;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8vh;
+}
+
+/* Goal Styling */
+body.goal{
+    background: url("../images/message-bg.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+#goals {
+    padding-bottom: 3em;
+}
+
+#goals >article {
+    padding: 0.5em;
+    padding-top: 0em;
+    padding-bottom: 1em;
+    margin: 1em 0;
+    border: 2px rgb(67, 57, 73) solid;
+    border-radius: 8px;
+    background-color: rgba(200, 200, 200, 0.75);
+}
+
+#goals >article >h1 {
+    margin: 1em 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#goals >article >h2 {
+    margin: 1em 0;
+}
+
+#goals >article >a {
+    font-size: 0.8em;
+}
+
+.crossed{
+    color: green;
+}
+
+/* Message Styling */
+body.message{
+    background: url("../images/message-bg.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+.message >article {
+    max-width: 60vw;
+    padding: 1em;
+    margin: 0 auto;
+    margin-top: 4em;
+    display: block;
+    background-color: rgba(200, 200, 200, 0.75);
+    border: 2px rgb(67, 57, 73) solid;
+    border-radius: 8px;
+}
+
+.message >article >* {
+    margin: 1em 0;
+}
+
+.message h2 {
+    font-size: 1.6em;
+}
+
+.message p {
+    font-size: 1.2em;
+}
+
+.message >article .button{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 4em;
+    display: block;
+}
+
+/* About page styling */
+.about-info {
+    margin-top: 2%;
+    margin-left:10%;
+}
+
+#about-title {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 5em;
+    margin-bottom: 0.25em;
+}
+
+.about-info li {
+    list-style: none;
+}
+
+.about-info img {
+    width:5%;
+    height:5%;
+}
+
+.devs p {
+    margin-bottom: 2em;
+}
+
+#about-description {
+    margin-bottom:2em;
+}
+
+.about-instructions p {
+    margin-right: 10%;
+    margin-bottom: 2em;
+}
+
+/* Home styling */
+body{
+    height:90vh;
+}
+
+body.welcome{
+    background-image: url("../images/home.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+body.welcome section{
+    margin-top: 3em;
+}
+
+body.welcome img{
+    max-width: 10%;
+}
+
+body.welcome img#logo{
+    margin: 2em;
+    display: flex;
+    float: left;
+}
+
+body.welcome article {
+   border: 2px solid rgb(67, 57, 73);
+   padding: 1em 2em;
+   border-radius: 10px;
+   margin-top: 1em;
+}
+
+body.welcome h1{
+    font-size: 3em;
+}
+
+body.welcome p{
+    margin: 1em;
+    font-family: 'Special Elite', cursive;
+    font-size:23px;
+}
+
+body.welcome .accept nav a:link,.accept nav a:visited{
+    background-color:rgb(74, 79, 88);
+    color: white;
+    font-family: 'Concert One', cursive;
+    font-size: 45px;
+    width: 200px;
+    height:70px;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+}
+
+body.welcome .accept nav a:hover,.accept nav a:active{
+    background-color:black;
+}
+
+body.welcome .accept nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.welcome .accept{
+    position: relative;
+    margin: auto;
+    margin-top:80px;
+    margin-bottom:150px;
+}
+
+
+/* Introduction styling */
+body.introduction img#logo{
+    max-width: 10%;
+}
+
+body.introduction{
+    background-image: url("../images/home.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover; 
+}
+
+body.introduction figure img{
+    max-width: 50%;
+}
+
+body.introduction section.top a figcaption {
+    animation: pause 1s  infinite ;
+}
+
+@keyframes pause{
+    0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+body.introduction section figure figcaption{
+    background-color:oldlace;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 80px;
+    font-family: 'Jua', sans-serif;
+    
+}
+
+body.introduction section figure figcaption:hover, body.introduction section figure figcaption:active{
+    background-color: bisque;
+    color:lightcoral;
+}
+
+body.introduction section{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7em;
+}
+
+body.introduction a {
+    color: black;
+    text-decoration: none;
+}
+
+body.introduction p{
+    color: white;
+}
+
+/* The Menu Modal */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    padding-top: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+  }
+  
+.modal-content {
+    /* PREVIOUS STYLE */
+
+    /* width: 40%;
+    padding: 1em; */
+    position: fixed;
+    bottom: 0;
+    margin: 0 33%;
+    /* border: 2px solid black;
+    border-radius: 8px; */
+
+    /* ANNA's STYLE */
+
+    background-color:rgb(184, 181, 181);
+    /* margin: auto; */
+    padding: 2%;
+    width: 30%;
+    border: 2px solid rgb(67, 57, 73);
+    border-radius: 2px;
+}
+
+.close {
+    float: right;
+}
+
+#menu-icon-image {
+    width: 4vw;
+    height: 4vw;
+    padding: 0 0.5em;
+    position: fixed;
+    bottom: 0;
+    left: 48%;
+    background-color: rgba(230, 230, 230, 0.7);
+    border-radius: 6px;
+}
+
+/* Anna's addition */ 
+
+.modal-content li {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.modal-content a {
+    text-decoration: none;
+    color: Black;
+    display:flex;
+    align-content: center;
+    font-size: 120%;
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+}
+
+.modal-content p {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#inner-menu-icon {
+    width:20%;
+    height:72px;
+    border-radius: 8px;
+    margin-right:10px;
+}
+
+.link-container {
+    background-color:grey;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 72px;
+}
+
+.link-container:hover {
+    background-color: rgb(154, 125, 180);
+}
+
+.link-container:active {
+    background-color:  rgb(119, 78, 155);
+}
